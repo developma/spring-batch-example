@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.batch.repository.EmpMapper">
+
+    <resultMap id="emp" type="com.example.batch.domain.Emp">
+        <result column="EMP_ID" property="empId" />
+        <result column="EMP_NAME" property="ename" />
+        <result column="BASIC_SALARY" property="basicSalary" />
+        <result column="GRADE_CODE" property="grade.gradeCode" />
+        <result column="BONUS_MAGNIFICATION" property="grade.bonusMagnification" />
+        <result column="FIXED_BONUS" property="grade.fixedBonus" />
+    </resultMap>
+
+    <select id="findAll" resultMap="emp">
+        <![CDATA[
+            SELECT
+                EMP.EMP_ID,
+                EMP.EMP_NAME,
+                EMP.BASIC_SALARY,
+                EMP.GRADE_CODE,
+                GRADE.BONUS_MAGNIFICATION,
+                GRADE.FIXED_BONUS
+        FROM
+            EMP
+            INNER JOIN GRADE
+                ON EMP.GRADE_CODE = GRADE.GRADE_CODE
+        ]]>
+    </select>
+</mapper>
