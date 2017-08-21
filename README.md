@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Maeno/spring-batch-example.svg?branch=master)](https://travis-ci.org/Maeno/spring-batch-example)
+
 # What's the batch-example?
 
 The batch-example is a batch application using Spring Batch and MyBatis.  
