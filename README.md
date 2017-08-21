@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Maeno/spring-batch-example.svg?branch=master)](https://travis-ci.org/Maeno/spring-batch-example)
+[![Coverage Status](https://coveralls.io/repos/github/Maeno/spring-batch-example/badge.svg?branch=master)](https://coveralls.io/github/Maeno/spring-batch-example?branch=master)
 
 # What's the batch-example?
 

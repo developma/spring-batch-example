@@ -1,2 +1,4 @@
 language: java
 script: ./gradlew build test
+after_success:
+    - ./gradlew jacocoTestReport coveralls
